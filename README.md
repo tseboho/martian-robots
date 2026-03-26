@@ -10,16 +10,16 @@ Install dependencies:
 yarn install
 ```
 
-### Available scripts
+## Running the App (CLI)
+
+Run the CLI by passing an input file path: `yarn start <some-file>.txt`.
+
+Available scripts include:
 
 - `yarn start <input-file>` runs the CLI with ts-node
 - `yarn test` runs the Vitest suite once
 - `yarn test:watch` runs Vitest in watch mode
 - `yarn typecheck` runs the TypeScript compiler without emitting files
-
-## Running the App (CLI)
-
-Run the CLI by passing an input file path: `yarn start <some-file>.txt`.
 
 Given an `input.txt` file containing:
 
@@ -87,12 +87,12 @@ README.md
 ### Assumptions
 
 - Input is provided via reading from specified text files. No API or string input.
-- Validation is lightweight and limited to malformed structure or invalid command/orientation values.
+- Validation is intentionally lightweight but includes malformed structure, invalid coordinates, invalid orientations, and invalid instruction sequences.
 - Scent tracking is keyed by coordinate plus orientation. The scent is still attached to the last valid coordinate, but the orientation is needed to represent the specific off-grid move that must be ignored by later robots.
 
-## Roadmap
+## Notes
 
-### TODO
+### Todos
 
 - [x] Set up the project and development tooling
 - [x] Confirm the CLI, typechecking, and test setup are working
@@ -107,10 +107,9 @@ README.md
 
 ### Potential improvements (Future)
 
-- [ ] Parser: When throwing a parsing error, include the line number and content of the offending line to aid in debugging.
-- [ ] Parser: Consider discarding invalid lines and continuing to parse the rest of the input instead of throwing an error immediately.
-- [ ] Index: Extend the app to take strings as input.
-- [ ] Index: Add a REST endpoint receiving game input and returning the results.
+- Parser errors could include line numbers and offending input for easier debugging
+- The CLI entrypoint could be refactored further around a pure runMission(input: string) function
+- Additional integration-style CLI tests could be added
 
 ## Verdict
 
