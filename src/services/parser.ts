@@ -20,10 +20,6 @@ import { Orientation, ORIENTATIONS } from "../domain/orientation";
  * - Coordinate values cannot be greater than 50.
  * - Instruction sequences must not longer than 100 characters.
  * 
- * TODO: When throwing a parsing error, include the line number and content of the offending line to aid in debugging.
- * TODO: Consider discarding invalid lines and continuing to parse the rest of the input instead of throwing an error immediately.
- * 
- * 
  */
 
 export const ERROR_MESSAGES = {
@@ -36,7 +32,7 @@ export const ERROR_MESSAGES = {
   INVALID_INSTRUCTION_SEQUENCE: "Invalid instruction sequence. Expected only L, R, F.",
   EMPTY_INPUT: "Input cannot be empty.",
   INVALID_ROBOT_PAIRS: "Invalid robot input. Expected pairs of position and instruction lines.",
-} as const;
+};
 
 export interface ParsedRobotInput {
   x: number;
