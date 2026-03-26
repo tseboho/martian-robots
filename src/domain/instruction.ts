@@ -1,5 +1,7 @@
 export type Instruction = "L" | "R" | "F";
 
+export const INSTRUCTIONS: Instruction[] = ["L", "R", "F"];
+
 // Convenience constants for instructions
 export const LEFT: Instruction = "L";
 export const RIGHT: Instruction = "R";

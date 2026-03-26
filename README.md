@@ -79,7 +79,7 @@ README.md
 - [x] Implement instruction execution
 - [x] Handle robot loss and scent tracking
 - [x] Support multiple robots within a shared world
-- [ ] Parse input from the challenge format
+- [x] Parse input from the challenge format
 - [ ] Complete the file-based CLI flow
 - [ ] Add coverage for core behaviours and edge cases
 - [ ] Finalise documentation and submission polish

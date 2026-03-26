@@ -1,5 +1,8 @@
 export type Orientation = "N" | "E" | "S" | "W";
 
+// Define the Instruction type
+export const ORIENTATIONS: Orientation[] = ["N", "E", "S", "W"];
+
 // Left and right turns for each orientation
 const LEFT_TURNS: Record<Orientation, Orientation> = {
   N: "W",
