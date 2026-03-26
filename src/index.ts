@@ -6,6 +6,12 @@ import { World } from "./domain/world";
 import { Simulator } from "./services/simulator";
 import { parseMission } from "./services/parser";
 
+/**
+ * The main function serves as the entry point for the Martian Robots simulation.
+ * It reads the input file, parses the mission details, initializes the world and simulator, and executes the instructions for each robot. 
+ * The results are printed to the console, and any errors encountered during execution are handled gracefully.
+ */
+
 const main = (): void => {
   const inputFilePath = process.argv[2];
 
@@ -26,8 +32,6 @@ const main = (): void => {
       simulator.execute(robot, instructions, world);
       return robot.toString();
     });
-
-    console.log(results.join("\n"));
   } catch (error) {
     const message =
       error instanceof Error ? error.message : "An unexpected error occurred.";

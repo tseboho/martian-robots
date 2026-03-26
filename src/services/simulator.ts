@@ -3,6 +3,11 @@ import { Robot } from "../domain/robot";
 import { World } from "../domain/world";
 import { logger } from "../utils/logger";
 
+/**
+ * The Simulator class is responsible for executing a series of instructions for a given robot within a defined world.
+ * It processes each instruction, updates the robot's state accordingly, and handles edge cases such as moving out of bounds.
+ */
+
 export class Simulator {
   execute(robot: Robot, instructions: Instruction[], world: World): Robot {
     logger.log(`>>> World bounds: (${world.maxX}, ${world.maxY})`);

@@ -73,6 +73,10 @@ README.md
 
 ## Context
 
+### Scope
+
+This solution is intentionally small and CLI-first. It focuses on the challenge rules, test coverage, and a clear separation between parsing, domain logic, and orchestration.
+
 ## TODO
 
 - [x] Set up the project and development tooling
@@ -86,9 +90,10 @@ README.md
 - [ ] Add coverage for core behaviours and edge cases
 - [ ] Finalise documentation and submission polish
 
-### Scope
+## Improvements
 
-This solution is intentionally small and CLI-first. It focuses on the challenge rules, test coverage, and a clear separation between parsing, domain logic, and orchestration.
+- TODO: When throwing a parsing error, include the line number and content of the offending line to aid in debugging.
+- TODO: Consider discarding invalid lines and continuing to parse the rest of the input instead of throwing an error immediately.
 
 ### Design Notes
 
