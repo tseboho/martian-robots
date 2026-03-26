@@ -54,7 +54,7 @@ export class Simulator {
       }
     }
 
-    logger.log(">>> Robot FINAL position: ", robot.toString());
+    logger.log(`>>> Robot FINAL position was "${robot.toString()}"\n`);
     return robot;
   }
 }

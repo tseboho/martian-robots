@@ -61,9 +61,11 @@ Should produce:
 ## Project Layout
 
 ```txt
+inputs/
 src/
   domain/
   services/
+  utils/
   index.ts
 tests/
 README.md
@@ -80,7 +82,7 @@ README.md
 - [x] Handle robot loss and scent tracking
 - [x] Support multiple robots within a shared world
 - [x] Parse input from the challenge format
-- [ ] Complete the file-based CLI flow
+- [x] Complete the file-based CLI flow
 - [ ] Add coverage for core behaviours and edge cases
 - [ ] Finalise documentation and submission polish
 
